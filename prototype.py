@@ -3,8 +3,8 @@ import numpy as np
 k_scale = 0.5
 
 h_thresh = (50, 90)
-s_thresh = (100, 255)
-v_thresh = (80, 255)
+s_thresh = (140, 255)
+v_thresh = (140, 255)
 
 
 def preprocess(img):
