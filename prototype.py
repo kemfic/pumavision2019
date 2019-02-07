@@ -10,10 +10,10 @@ v_thresh = (230, 255)
 def preprocess(img):
   #img = cv2.resize(img, (0,0), k_scale, k_scale)
 
-  #kernel = np.ones((7,7), np.uint8)
+  kernel = np.ones((7,7), np.uint8)
 
-  #img = cv2.erode(img, kernel, 10)
-  #img = cv2.dilate(img, kernel, 10)
+  img = cv2.erode(img, kernel, 10)
+  img = cv2.dilate(img, kernel, 10)
 
   img = cv2.cvtColor(img, cv2.COLOR_BGR2HLS)
   return img
