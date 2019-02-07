@@ -43,13 +43,11 @@ if __name__ == '__main__':
 
     contours, hierarchy = get_contours(mask)
 
-    for cnt in contours:
-      if
-    out = cv2.drawContours(frame, contours, -1, (50, 0, 255), 3)
 
     cv2.imshow("input", frame)
     cv2.imshow("mask", mask*255)
 
+    out = cv2.drawContours(frame, contours, -1, (50, 0, 255), 3)
     cv2.imshow("out", out)
     cv2.imshow("output", cv2.cvtColor(cv2.bitwise_and(img, img, mask=mask), cv2.COLOR_HLS2BGR))
     if cv2.waitKey(1) & 0xFF == ord('q'):
