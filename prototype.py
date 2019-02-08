@@ -33,23 +33,26 @@ def get_contours(mask):
   ret, contours, hierarchy = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
   return contours, hierarchy
 
-if __name__ == '__main__':
-  cap = cv2.VideoCapture(0)
-  while True:
-    ret, frame = cap.read()
-
+def pipeline(frame):
     img = preprocess(frame)
     mask = get_mask(img)
-
     contours, hierarchy = get_contours(mask)
-
-
+    
     cv2.imshow("input", frame)
     cv2.imshow("mask", mask*255)
 
     out = cv2.drawContours(frame, contours, -1, (50, 0, 255), 3)
     cv2.imshow("out", out)
     cv2.imshow("output", cv2.cvtColor(cv2.bitwise_and(img, img, mask=mask), cv2.COLOR_HLS2BGR))
+
+
+if __name__ == '__main__':
+  cap = cv2.VideoCapture(0)
+  while True:
+    ret, frame = cap.read()
+    pipeline(frame)
+    
+
     if cv2.waitKey(1) & 0xFF == ord('q'):
       break
 
