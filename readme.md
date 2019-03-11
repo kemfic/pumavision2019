@@ -7,7 +7,7 @@ some vision stuff we worked on in FIRST Deep Space
 
 todo
 ---
- - finish retroreflective tape tracking code
-  - add PID tracker, NetworkTables interface
- - add cargo tracking code
-  - NT interface
+ - clean up code for trackers
+ - create NetworkTables publisher
+ - write CameraServer for RoboRIO
+ - finish it up
