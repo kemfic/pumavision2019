@@ -2,7 +2,7 @@ pumavision 2019
 ---
 some vision stuff we worked on in FIRST Deep Space
 
-![img](resources/ls_pipeline.jpeg)
+![img](resources/ls_pipeline_1.jpeg)
 ![img](resources/cargo_pipeline.png)
 
 todo
